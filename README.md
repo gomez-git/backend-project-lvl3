@@ -1,2 +1,2 @@
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/gomez-git/backend-project-lvl3/workflows/hexlet-check/badge.svg)](https://github.com/gomez-git/backend-project-lvl3/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/76abc2dc9de7be4330a7/maintainability)](https://codeclimate.com/github/gomez-git/backend-project-lvl3/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/76abc2dc9de7be4330a7/test_coverage)](https://codeclimate.com/github/gomez-git/backend-project-lvl3/test_coverage)
