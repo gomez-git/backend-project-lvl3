@@ -1,5 +1,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/76abc2dc9de7be4330a7/maintainability)](https://codeclimate.com/github/gomez-git/backend-project-lvl3/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/76abc2dc9de7be4330a7/test_coverage)](https://codeclimate.com/github/gomez-git/backend-project-lvl3/test_coverage)
+[![linter&tests](https://github.com/gomez-git/backend-project-lvl3/actions/workflows/linter-tests.yml/badge.svg?branch=main)](https://github.com/gomez-git/backend-project-lvl3/actions/workflows/linter-tests.yml)
 # Annotation
 This is my third JavaScript project based on Hexlet backend courses. I build a page downloader. 
 ## How to install
@@ -22,6 +23,6 @@ Options:
   -V, --version       output the version number
   -o, --output [dir]  output dir (default: "/${your_path}/backend-project-lvl3")
   -h, --help          display help for command
-  ```
-  ## Preview of page-loader util
-  [![asciicast](https://asciinema.org/a/TUezDLjqpZE3YaYrv8ECVQKlp.svg)](https://asciinema.org/a/TUezDLjqpZE3YaYrv8ECVQKlp)
+```
+## Preview of page-loader util
+[![asciicast](https://asciinema.org/a/CpSaMbrnGM90hSvpjUYhUMCsH.svg)](https://asciinema.org/a/CpSaMbrnGM90hSvpjUYhUMCsH)
