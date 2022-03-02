@@ -14,23 +14,35 @@ on:
 
 jobs:
   build:
+
+    runs-on: ubuntu-latest
+
     strategy:
       matrix:
-        platform: [ ubuntu-latest, macOS-latest ]
-        node: [ 14, 16 ]
-    runs-on: ${{ matrix.platform }}
+        node-version: [14.x]
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - run: make install
-        env: 
+
+      - name: Install dependencies
+        run: make install
+        env:
           CI: true
-      - run: make lint
-      - run: make test
-      - uses: paambaati/codeclimate-action@v3
+
+      - name: Run linter
+        run: make lint
+
+      - name: Run jest
+        run: make test
+        
+      - name: Test & publish code coverage
+        uses: paambaati/codeclimate-action@v2.7.4
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
