@@ -22,6 +22,6 @@ Options:
   -V, --version       output the version number
   -o, --output [dir]  output dir (default: "/${your_path}/backend-project-lvl3")
   -h, --help          display help for command
-  ```
-  ## Preview of page-loader util
-  [![asciicast](https://asciinema.org/a/TUezDLjqpZE3YaYrv8ECVQKlp.svg)](https://asciinema.org/a/TUezDLjqpZE3YaYrv8ECVQKlp)
+```
+## Preview of page-loader util
+[![asciicast](https://asciinema.org/a/CpSaMbrnGM90hSvpjUYhUMCsH.svg)](https://asciinema.org/a/CpSaMbrnGM90hSvpjUYhUMCsH)
