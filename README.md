@@ -25,4 +25,4 @@ Options:
   -h, --help          display help for command
 ```
 ## Preview of page-loader util
-[![asciicast](https://asciinema.org/a/CpSaMbrnGM90hSvpjUYhUMCsH.svg)](https://asciinema.org/a/CpSaMbrnGM90hSvpjUYhUMCsH)
+[![asciicast](https://asciinema.org/a/AZiKYf81soWOLuuSOYa9xhUEH.svg)](https://asciinema.org/a/AZiKYf81soWOLuuSOYa9xhUEH)
