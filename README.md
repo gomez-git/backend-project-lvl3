@@ -25,4 +25,7 @@ Options:
   -h, --help          display help for command
 ```
 ## Preview of page-loader util
+### How to use
 [![asciicast](https://asciinema.org/a/AZiKYf81soWOLuuSOYa9xhUEH.svg)](https://asciinema.org/a/AZiKYf81soWOLuuSOYa9xhUEH)
+### Download page with debug
+[![asciicast](https://asciinema.org/a/nilq377dq1AMQT68N60tZgasE.svg)](https://asciinema.org/a/nilq377dq1AMQT68N60tZgasE)
