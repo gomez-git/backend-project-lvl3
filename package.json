@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/code",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "My third backend project",
   "type": "module",
   "bin": {
@@ -24,8 +24,10 @@
   "homepage": "https://github.com/gomez-git/backend-project-lvl3#readme",
   "dependencies": {
     "axios": "^0.26.0",
+    "axios-debug-log": "^0.8.4",
     "cheerio": "^1.0.0-rc.10",
     "commander": "^9.0.0",
+    "debug": "^4.3.3",
     "prettier": "^2.5.1"
   },
   "devDependencies": {
