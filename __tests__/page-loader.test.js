@@ -69,9 +69,9 @@ describe('positive case', () => {
     expect(actual).toEqual(expected);
   });
 
-  test.each([
-    Object.keys(files).map((e) => (e === 'actual' ? [] : [e])).flat(),
-  ])('%s downloaded', async (file) => {
+  test.each(
+    Object.keys(files).filter((e) => e !== 'actual').map((e) => [e]),
+  )('%s downloaded', async (file) => {
     const { fixturePath, loadPath } = files[file];
     const filepath = path.join(tempdir, loadPath);
     const expected = await fs.readFile(getFixturePath(fixturePath));
