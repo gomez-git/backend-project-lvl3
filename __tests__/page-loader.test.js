@@ -82,3 +82,42 @@ describe('positive case', () => {
 
   afterAll(() => fs.rm(tempdir, { recursive: true, force: true }));
 });
+
+describe('negative cases', () => {
+  let tempdir;
+
+  beforeAll(async () => {
+    tempdir = await fs.mkdtemp(path.join(os.tmpdir(), 'page-loader-'));
+    await fs.mkdir(path.join(tempdir, 'ru-hexlet-io_files'));
+    await fs.mkdir(path.join(tempdir, 'no'), 0o555);
+  });
+
+  test.each([
+    ['Client error', 404],
+    ['Server error', 503],
+  ])('%s %d', async (errMessage, status) => {
+    const url = 'https://ru.hexlet.io';
+    nock(url).get('/').reply(status);
+
+    await expect(pageLoader(url, '/'))
+      .rejects
+      .toThrowError(`${errMessage} ${status} null (GET ${url})`);
+  });
+
+  test.each([
+    ['EEXIST', '', 'Directory ru-hexlet-io_files already exists!'],
+    ['ENOENT', 'path/to/dir', 'Target directory doesn\'t exist!'],
+    ['EACCES', 'no', 'Permission denied!'],
+  ])('file system error: %s', async (_n, dirname, errMessage) => {
+    const url = 'https://ru.hexlet.io';
+    const dirpath = path.join(tempdir, dirname);
+    nock(url).get('/').reply(200, '<html><link href="/nodejs.html"></html>');
+    nock(url).get('/nodejs.html').reply(200, '');
+
+    await expect(pageLoader(url, dirpath))
+      .rejects
+      .toThrowError(errMessage);
+  });
+
+  afterAll(() => fs.rm(tempdir, { recursive: true, force: true }));
+});
