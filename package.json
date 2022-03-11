@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/code",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "My third backend project",
   "type": "module",
   "bin": {
