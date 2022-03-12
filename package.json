@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/code",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "My third backend project",
   "type": "module",
   "bin": {
@@ -28,6 +28,7 @@
     "cheerio": "^1.0.0-rc.10",
     "commander": "^9.0.0",
     "debug": "^4.3.3",
+    "listr": "^0.14.3",
     "prettier": "^2.5.1"
   },
   "devDependencies": {
