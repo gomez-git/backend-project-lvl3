@@ -56,9 +56,10 @@ describe('positive case', () => {
 
   test('page loader return downloaded html filepath', async () => {
     await pageLoader('https://ru.hexlet.io/courses', tempdir)
-      .then((filepath) => {
+      .then(([filepath, tasks]) => {
         const expected = path.join(tempdir, files.actual.loadPath);
         expect(filepath).toEqual(expected);
+        return Promise.all(tasks.map(([, e]) => e));
       });
   });
 
@@ -105,7 +106,7 @@ describe('negative cases', () => {
   });
 
   test.each([
-    ['EEXIST', '', 'Directory ru-hexlet-io_files already exists!'],
+    ['EEXIST', '', 'Directory for resources already exists!'],
     ['ENOENT', 'path/to/dir', 'Target directory doesn\'t exist!'],
     ['EACCES', 'no', 'Permission denied!'],
   ])('file system error: %s', async (_n, dirname, errMessage) => {
