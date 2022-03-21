@@ -56,10 +56,9 @@ describe('positive case', () => {
 
   test('page loader return downloaded html filepath', async () => {
     await pageLoader('https://ru.hexlet.io/courses', tempdir)
-      .then(([filepath, tasks]) => {
+      .then((filepath) => {
         const expected = path.join(tempdir, files.actual.loadPath);
         expect(filepath).toEqual(expected);
-        return Promise.all(tasks.map(([, e]) => e));
       });
   });
 
