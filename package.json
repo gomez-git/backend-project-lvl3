@@ -3,6 +3,7 @@
   "version": "1.0.5",
   "description": "My third backend project",
   "type": "module",
+  "main": "lib/index.js",
   "bin": {
     "page-loader": "bin/page-loader.js"
   },
